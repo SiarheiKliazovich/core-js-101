@@ -310,9 +310,7 @@ function get3TopItems(arr) {
  *   [ 1, '2' ] => 1
  */
 function getPositivesCount(arr) {
-  // return arr.filter((value) => value > 0).length;
-  // return arr.reduce((acc, x) => (x > 0 ? acc + 1 : acc), 0);
-  return arr.reduce((prev, cur) => (cur > 0 ? prev + 1 : prev), 0);
+  return arr.reduce((prev, cur) => ((cur > 0 && typeof (cur) === 'number') ? prev + 1 : prev), 0);
 }
 
 /**
